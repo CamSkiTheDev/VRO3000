@@ -31,5 +31,5 @@ def index(request):
     r = requests.get(f"{base_uri}/optimized-trips/v1/mapbox/driving/{coordinate_str}?access_token={access_token}")
     json_data = r.json()
 
-    json_data['waypoints'] = sorted(json_data['waypoints'], key=lambda i: (i['waypoint_index']))
+    # json_data['waypoints'] = sorted(json_data['waypoints'], key=lambda i: (i['waypoint_index']))
     return JsonResponse(json_data, safe=False)
