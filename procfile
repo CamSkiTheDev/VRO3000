@@ -1,0 +1,1 @@
+web gunicorn vro3000.wsgi:application --log-file -
